@@ -1,0 +1,23 @@
+{
+  "name": "websocket_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "http": "0.0.1-security",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.7",
+    "query-string": "^6.13.8",
+    "websocket-stream": "^5.5.2",
+    "ws": "^7.4.1"
+  }
+}

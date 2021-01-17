@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+</head>
+<body>
+    <video id="video" muted autoPlay></video>
+    <script>
+        if(Hls.isSupported()) {
+            var video = document.getElementById('video')
+            var hls = new Hls()
+            hls.loadSource('playlist.m3u8')
+            hls.attachMedia(video)
+            hls.on(Hls.Events.MANIFEST_PARSED,function() {
+            video.play()
+        })
+        }
+
+        const ws = new WebSocket('ws://localhost:9900')
+        ws.onmessage = function (event) {
+            console.log(JSON.parse(event.data))
+        }
+    </script>
+</body>
+</html>
