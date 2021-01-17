@@ -11,10 +11,6 @@ const { port } = config
 router(app)
 wss(server)
 
-// server.on('upgrade',(req, socket, head)=>{
-//     console.log(req.url)
-// })
-
 server.listen(port, _ => {
     console.log(port)
 })

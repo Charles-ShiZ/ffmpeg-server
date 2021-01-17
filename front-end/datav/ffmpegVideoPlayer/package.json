@@ -1,0 +1,77 @@
+{
+  "name": "@ljdy.test/ffmpeg-video-player",
+  "version": "0.8.0",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1",
+    "video.js": "^7.10.2"
+  },
+  "private": true,
+  "datav": {
+    "cn_name": "FFMPEG视频流播放器",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "400",
+      "height": "300",
+      "minWidth": "200",
+      "minHeight": "200"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "size",
+        "type": "suite",
+        "default": "",
+        "children": {
+          "width": {
+            "name": "width",
+            "type": "number",
+            "default": 400,
+            "col": 12
+          },
+          "height": {
+            "name": "height",
+            "type": "number",
+            "default": 300,
+            "col": 12
+          }
+        }
+      },
+      "id": {
+        "name": "id(唯一)",
+        "type": "string",
+        "default": "videoBox"
+      },
+      "src": {
+        "name": "url",
+        "type": "string",
+        "default": ""
+      },
+      "server": {
+        "name": "server",
+        "type": "string",
+        "default": "ws://localhost:8888/rtsp"
+      }
+    },
+    "api_data": {
+      "source": {
+        "src": "rtmp://59.63.182.37:11935/live/real-734a3f9f-c46f-4506-b004-79fdd7d4fcea"
+      }
+    }
+  }
+}
